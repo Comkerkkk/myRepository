@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TouchViewController">
+            <connections>
+                <outlet property="tableView" destination="3wW-PH-yv0" id="C2k-iE-dVd"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QP5-jQ-Vcw">
+                    <rect key="frame" x="0.0" y="607" width="375" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="0Nd-LY-96Y"/>
+                    </constraints>
+                    <state key="normal" title="添加地址"/>
+                    <connections>
+                        <action selector="AddTouchAction:" destination="-1" eventType="touchUpInside" id="9BF-4m-XBe"/>
+                    </connections>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="3wW-PH-yv0">
+                    <rect key="frame" x="0.0" y="20" width="375" height="587"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Zf0-lA-GPs"/>
+                        <outlet property="delegate" destination="-1" id="RNK-zn-EuQ"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="QP5-jQ-Vcw" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="1CF-sy-Cdx"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="QP5-jQ-Vcw" secondAttribute="trailing" id="2sR-EA-pLZ"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="QP5-jQ-Vcw" secondAttribute="bottom" id="N65-24-h5O"/>
+                <constraint firstItem="QP5-jQ-Vcw" firstAttribute="top" secondItem="3wW-PH-yv0" secondAttribute="bottom" id="VPH-Ty-44Y"/>
+                <constraint firstItem="3wW-PH-yv0" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="W74-vc-1oB"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="3wW-PH-yv0" secondAttribute="trailing" id="jDg-UN-3bc"/>
+                <constraint firstItem="3wW-PH-yv0" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="uTl-aE-DGo"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+        </view>
+    </objects>
+</document>
