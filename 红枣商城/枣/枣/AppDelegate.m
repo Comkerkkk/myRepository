@@ -20,8 +20,8 @@
     // Override point for customization after application launch.
     self.window=[[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     LoginViewController*loginViewController=[[LoginViewController alloc]init];
-    UINavigationController*nav=[[UINavigationController alloc]initWithRootViewController:loginViewController];
-    self.window.rootViewController=nav;
+//    UINavigationController*nav=[[UINavigationController alloc]initWithRootViewController:loginViewController];
+    self.window.rootViewController=loginViewController;
     [self.window makeKeyAndVisible];
     return YES;
 }

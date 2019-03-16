@@ -91,7 +91,8 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             
             MyViewController*vc=[[MyViewController alloc]init];
-            [strongSelf presentViewController:vc animated:YES completion:nil];
+//            [strongSelf presentViewController:vc animated:YES completion:nil];
+            [UIApplication sharedApplication].keyWindow.rootViewController=vc;
             
             strongSelf.nameTF.text=@"";
             strongSelf.pwdTF.text=@"";

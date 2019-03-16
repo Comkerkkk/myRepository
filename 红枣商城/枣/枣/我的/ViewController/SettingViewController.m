@@ -8,6 +8,7 @@
 
 #import "SettingViewController.h"
 #import "ChangePWDViewController.h"
+#import "LoginViewController.h"
 @interface SettingViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
@@ -67,7 +68,9 @@
     if(indexPath.row==0){
         [self.navigationController pushViewController:[ChangePWDViewController new] animated:YES];
     }else{
-        [self dismissViewControllerAnimated:YES completion:nil];
+//        [self dismissViewControllerAnimated:YES completion:nil];
+        LoginViewController*loginVC= [LoginViewController new];
+        [UIApplication sharedApplication].keyWindow.rootViewController=loginVC;
     }
 }
 @end
