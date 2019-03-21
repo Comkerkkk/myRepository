@@ -7,7 +7,7 @@
 //
 
 #import "AddTouchViewController.h"
-
+#import "TELTool.h"
 #import "UserInfo.h"
 #import <MBProgressHUD.h>
 @interface AddTouchViewController ()
@@ -49,7 +49,7 @@
         hud.label.text=@"请输入收货人电话";
         [hud hideAnimated:YES afterDelay:2];
         
-    }else if (![self isValidPhone:self.telTF.text]){
+    }else if (![TELTool isValidPhone:self.telTF.text]){
         MBProgressHUD*hud= [MBProgressHUD showHUDAddedTo:self.view animated:YES];
         hud.mode=MBProgressHUDModeText;
         hud.label.text=@"请输入一个正确的电话号码";
@@ -100,36 +100,5 @@
     [task resume];
     
 }
--(BOOL)isValidPhone:(NSString *)phone
-{
-    if (phone.length != 11)
-    {
-        return NO;
-    }else{
-        /**
-         * 移动号段正则表达式
-         */
-        NSString *CM_NUM = @"^((13[4-9])|(147)|(15[0-2,7-9])|(178)|(18[2-4,7-8]))\\d{8}|(1705)\\d{7}$";
-        /**
-         * 联通号段正则表达式
-         */
-        NSString *CU_NUM = @"^((13[0-2])|(145)|(15[5-6])|(176)|(18[5,6]))\\d{8}|(1709)\\d{7}$";
-        /**
-         * 电信号段正则表达式
-         */
-        NSString *CT_NUM = @"^((133)|(153)|(177)|(18[0,1,9]))\\d{8}$";
-        NSPredicate *pred1 = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", CM_NUM];
-        BOOL isMatch1 = [pred1 evaluateWithObject:phone];
-        NSPredicate *pred2 = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", CU_NUM];
-        BOOL isMatch2 = [pred2 evaluateWithObject:phone];
-        NSPredicate *pred3 = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", CT_NUM];
-        BOOL isMatch3 = [pred3 evaluateWithObject:phone];
-        
-        if (isMatch1 || isMatch2 || isMatch3) {
-            return YES;
-        }else{
-            return NO;
-        }
-    }
-}
+
 @end

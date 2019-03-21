@@ -7,7 +7,7 @@
 //
 
 #import "NewsViewController.h"
-
+#import "TextHeightTool.h"
 @interface NewsViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
@@ -22,18 +22,19 @@
 -(CGFloat)titleHeight{
     if(_titleHeight==0){
 
-        //文本宽度
-        CGFloat textW=CGRectGetWidth([UIScreen mainScreen].bounds);
-        
-        //文本样式字典
-        NSDictionary *textAttr=@{NSFontAttributeName:[UIFont systemFontOfSize:19]};
-        
-        //文本最大尺寸限制
-        CGSize textMaxSize=CGSizeMake(textW, MAXFLOAT);
-        
-        //计算高度
-        CGFloat textH=[self.t boundingRectWithSize:textMaxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:textAttr context:nil].size.height;
-        _titleHeight=textH;
+//        //文本宽度
+//        CGFloat textW=CGRectGetWidth([UIScreen mainScreen].bounds);
+//
+//        //文本样式字典
+//        NSDictionary *textAttr=@{NSFontAttributeName:[UIFont systemFontOfSize:19]};
+//
+//        //文本最大尺寸限制
+//        CGSize textMaxSize=CGSizeMake(textW, MAXFLOAT);
+//
+//        //计算高度
+//        CGFloat textH=[self.t boundingRectWithSize:textMaxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:textAttr context:nil].size.height;
+//        _titleHeight=textH;
+        _titleHeight=[TextHeightTool contentHeightWithText:self.t textWidth:[UIScreen mainScreen].bounds.size.width stringSize:19];
     }
     return _titleHeight;
 }
@@ -43,12 +44,13 @@
 -(CGFloat)timeHeight{
     if(_timeHeight==0){
         
-        
-        CGFloat textW=CGRectGetWidth([UIScreen mainScreen].bounds);
-        NSDictionary *textAttr=@{NSFontAttributeName:[UIFont systemFontOfSize:16]};
-        CGSize textMaxSize=CGSizeMake(textW, MAXFLOAT);
-        CGFloat textH=[self.time boundingRectWithSize:textMaxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:textAttr context:nil].size.height;
-        _timeHeight=textH;
+//
+//        CGFloat textW=CGRectGetWidth([UIScreen mainScreen].bounds);
+//        NSDictionary *textAttr=@{NSFontAttributeName:[UIFont systemFontOfSize:16]};
+//        CGSize textMaxSize=CGSizeMake(textW, MAXFLOAT);
+//        CGFloat textH=[self.time boundingRectWithSize:textMaxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:textAttr context:nil].size.height;
+//        _timeHeight=textH;
+        _timeHeight=[TextHeightTool contentHeightWithText:self.time textWidth:[UIScreen mainScreen].bounds.size.width stringSize:16];
     }
     return _timeHeight;
 }
@@ -57,12 +59,13 @@
 -(CGFloat)contentHeight{
     if(_contentHeight==0){
         
-        
-        CGFloat textW=CGRectGetWidth([UIScreen mainScreen].bounds);
-        NSDictionary *textAttr=@{NSFontAttributeName:[UIFont systemFontOfSize:17]};
-        CGSize textMaxSize=CGSizeMake(textW, MAXFLOAT);
-        CGFloat textH=[self.content boundingRectWithSize:textMaxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:textAttr context:nil].size.height;
-        _contentHeight=textH;
+//
+//        CGFloat textW=CGRectGetWidth([UIScreen mainScreen].bounds);
+//        NSDictionary *textAttr=@{NSFontAttributeName:[UIFont systemFontOfSize:17]};
+//        CGSize textMaxSize=CGSizeMake(textW, MAXFLOAT);
+//        CGFloat textH=[self.content boundingRectWithSize:textMaxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:textAttr context:nil].size.height;
+//        _contentHeight=textH;
+        _contentHeight=[TextHeightTool contentHeightWithText:self.content textWidth:[UIScreen mainScreen].bounds.size.width stringSize:17];
     }
     return _contentHeight;
 }

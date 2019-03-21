@@ -13,6 +13,7 @@
 #import "ShopModel.h"
 #import "UserInfo.h"
 #import "IndentViewController.h"
+#import "TextHeightTool.h"
 #import <MJExtension.h>
 #import <MBProgressHUD.h>
 @interface DetailViewController ()<UITableViewDelegate,UITableViewDataSource>
@@ -20,6 +21,7 @@
 @property(nonatomic,strong)NSMutableArray*shopArray;
 @property (weak, nonatomic) IBOutlet UIButton *cartBtn;
 @property (weak, nonatomic) IBOutlet UIButton *buyBtn;
+@property(assign,nonatomic)CGFloat desH;
 @end
 
 @implementation DetailViewController
@@ -91,6 +93,8 @@
     }else{
         DescribeTableViewCell*cell=[tableView dequeueReusableCellWithIdentifier:@"DescribeTableViewCell"];
         cell.text_Label.text=model.des;
+        self.desH=[TextHeightTool contentHeightWithText:model.des textWidth:[UIScreen mainScreen].bounds.size.width-16 stringSize:15];
+       
         return  cell;
     }
     
@@ -104,7 +108,8 @@
     if(indexPath.section==0){
         return 182;
     }else{
-        return 260;
+        NSLog(@"%f",self.desH);
+        return self.desH+100;
     }
 }
 

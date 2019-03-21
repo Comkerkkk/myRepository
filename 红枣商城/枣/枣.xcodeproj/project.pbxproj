@@ -53,6 +53,8 @@
 		E2AEFCA922241203007C0B76 /* RecordDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2AEFCA722241203007C0B76 /* RecordDetailViewController.xib */; };
 		E2B47C35221694DE00B44A56 /* DescribeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E2B47C33221694DE00B44A56 /* DescribeTableViewCell.m */; };
 		E2B47C36221694DE00B44A56 /* DescribeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2B47C34221694DE00B44A56 /* DescribeTableViewCell.xib */; };
+		E2BB828D2243378400A44496 /* TextHeightTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E2BB828C2243378400A44496 /* TextHeightTool.m */; };
+		E2BB829022433EB000A44496 /* TELTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E2BB828F22433EB000A44496 /* TELTool.m */; };
 		E2BEB6542217E59000F4AEDF /* CartTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E2BEB6522217E59000F4AEDF /* CartTableViewCell.m */; };
 		E2BEB6552217E59000F4AEDF /* CartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2BEB6532217E59000F4AEDF /* CartTableViewCell.xib */; };
 		E2E360E021ED966400BB7B2E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E2E360DF21ED966400BB7B2E /* AppDelegate.m */; };
@@ -167,6 +169,10 @@
 		E2B47C32221694DE00B44A56 /* DescribeTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DescribeTableViewCell.h; sourceTree = "<group>"; };
 		E2B47C33221694DE00B44A56 /* DescribeTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DescribeTableViewCell.m; sourceTree = "<group>"; };
 		E2B47C34221694DE00B44A56 /* DescribeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DescribeTableViewCell.xib; sourceTree = "<group>"; };
+		E2BB828B2243378400A44496 /* TextHeightTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextHeightTool.h; sourceTree = "<group>"; };
+		E2BB828C2243378400A44496 /* TextHeightTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextHeightTool.m; sourceTree = "<group>"; };
+		E2BB828E22433EB000A44496 /* TELTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TELTool.h; sourceTree = "<group>"; };
+		E2BB828F22433EB000A44496 /* TELTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TELTool.m; sourceTree = "<group>"; };
 		E2BEB6512217E59000F4AEDF /* CartTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CartTableViewCell.h; sourceTree = "<group>"; };
 		E2BEB6522217E59000F4AEDF /* CartTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CartTableViewCell.m; sourceTree = "<group>"; };
 		E2BEB6532217E59000F4AEDF /* CartTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartTableViewCell.xib; sourceTree = "<group>"; };
@@ -360,6 +366,17 @@
 			path = "登录注册";
 			sourceTree = "<group>";
 		};
+		E2BB828A2243375F00A44496 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				E2BB828B2243378400A44496 /* TextHeightTool.h */,
+				E2BB828C2243378400A44496 /* TextHeightTool.m */,
+				E2BB828E22433EB000A44496 /* TELTool.h */,
+				E2BB828F22433EB000A44496 /* TELTool.m */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
 		E2BEB6492217CC1400F4AEDF /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -422,6 +439,7 @@
 		E2E360DD21ED966400BB7B2E /* 枣 */ = {
 			isa = PBXGroup;
 			children = (
+				E2BB828A2243375F00A44496 /* Tool */,
 				E2E3611321EDA8B600BB7B2E /* 发现 */,
 				E2E3611221EDA8B600BB7B2E /* 购物车 */,
 				E2E3610421ED9D3200BB7B2E /* 我的 */,
@@ -678,7 +696,9 @@
 				E2E3610C21EDA7A000BB7B2E /* ShopModel.m in Sources */,
 				E2EC1F8B221BA11F00A9D94A /* AddressViewController.m in Sources */,
 				E2E360E321ED966400BB7B2E /* ViewController.m in Sources */,
+				E2BB828D2243378400A44496 /* TextHeightTool.m in Sources */,
 				E248D15E222102B00018D3F1 /* NewsViewController.m in Sources */,
+				E2BB829022433EB000A44496 /* TELTool.m in Sources */,
 				E29567D5223AB2570004B730 /* UserInfoViewController.m in Sources */,
 				E2E360EE21ED966400BB7B2E /* main.m in Sources */,
 				E2220AF222111503002A5E64 /* TouchModel.m in Sources */,
