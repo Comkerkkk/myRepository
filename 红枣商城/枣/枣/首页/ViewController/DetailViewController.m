@@ -14,6 +14,7 @@
 #import "UserInfo.h"
 #import "IndentViewController.h"
 #import "TextHeightTool.h"
+#import "NSArray+errorHandle.h"
 #import <MJExtension.h>
 #import <MBProgressHUD.h>
 @interface DetailViewController ()<UITableViewDelegate,UITableViewDataSource>
@@ -61,7 +62,7 @@
 
 
 - (void)viewDidAppear:(BOOL)animated{
-    [self shopRequest];
+//    [self shopRequest];
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
 
@@ -74,7 +75,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
    
-    ShopModel*model=self.shopArray[0];
+    ShopModel*model=[self.shopArray objectAtIndexVerify:0];
     if(indexPath.section==0){
         ProductSpecCell*cell=[tableView dequeueReusableCellWithIdentifier:@"ProductSpecCell"];
         cell.selectionStyle=UITableViewCellSelectionStyleNone;
@@ -237,7 +238,11 @@
         hud.label.text=@"请先选择规格";
         [hud hideAnimated:YES afterDelay:2];
     }else{
+            vc.refreshBlock = ^{
+                [self shopRequest];};
+
         [self.navigationController pushViewController:vc animated:YES];
+        
     }
     
 }

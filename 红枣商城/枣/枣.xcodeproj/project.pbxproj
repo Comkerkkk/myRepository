@@ -55,6 +55,7 @@
 		E2B47C36221694DE00B44A56 /* DescribeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2B47C34221694DE00B44A56 /* DescribeTableViewCell.xib */; };
 		E2BB828D2243378400A44496 /* TextHeightTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E2BB828C2243378400A44496 /* TextHeightTool.m */; };
 		E2BB829022433EB000A44496 /* TELTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E2BB828F22433EB000A44496 /* TELTool.m */; };
+		E2BB829422437FA300A44496 /* NSArray+errorHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = E2BB829322437FA300A44496 /* NSArray+errorHandle.m */; };
 		E2BEB6542217E59000F4AEDF /* CartTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E2BEB6522217E59000F4AEDF /* CartTableViewCell.m */; };
 		E2BEB6552217E59000F4AEDF /* CartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2BEB6532217E59000F4AEDF /* CartTableViewCell.xib */; };
 		E2E360E021ED966400BB7B2E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E2E360DF21ED966400BB7B2E /* AppDelegate.m */; };
@@ -173,6 +174,8 @@
 		E2BB828C2243378400A44496 /* TextHeightTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextHeightTool.m; sourceTree = "<group>"; };
 		E2BB828E22433EB000A44496 /* TELTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TELTool.h; sourceTree = "<group>"; };
 		E2BB828F22433EB000A44496 /* TELTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TELTool.m; sourceTree = "<group>"; };
+		E2BB829222437FA300A44496 /* NSArray+errorHandle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+errorHandle.h"; sourceTree = "<group>"; };
+		E2BB829322437FA300A44496 /* NSArray+errorHandle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+errorHandle.m"; sourceTree = "<group>"; };
 		E2BEB6512217E59000F4AEDF /* CartTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CartTableViewCell.h; sourceTree = "<group>"; };
 		E2BEB6522217E59000F4AEDF /* CartTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CartTableViewCell.m; sourceTree = "<group>"; };
 		E2BEB6532217E59000F4AEDF /* CartTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartTableViewCell.xib; sourceTree = "<group>"; };
@@ -377,6 +380,15 @@
 			path = Tool;
 			sourceTree = "<group>";
 		};
+		E2BB829122437F5700A44496 /* Cagegory */ = {
+			isa = PBXGroup;
+			children = (
+				E2BB829222437FA300A44496 /* NSArray+errorHandle.h */,
+				E2BB829322437FA300A44496 /* NSArray+errorHandle.m */,
+			);
+			path = Cagegory;
+			sourceTree = "<group>";
+		};
 		E2BEB6492217CC1400F4AEDF /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -439,6 +451,7 @@
 		E2E360DD21ED966400BB7B2E /* 枣 */ = {
 			isa = PBXGroup;
 			children = (
+				E2BB829122437F5700A44496 /* Cagegory */,
 				E2BB828A2243375F00A44496 /* Tool */,
 				E2E3611321EDA8B600BB7B2E /* 发现 */,
 				E2E3611221EDA8B600BB7B2E /* 购物车 */,
@@ -734,6 +747,7 @@
 				E2977BD421F0275D00DC1AF6 /* LoginViewController.m in Sources */,
 				E21B9FE3221E5C9200D272BC /* OrderModel.m in Sources */,
 				E2F79D79220BF82300468C98 /* SignInModel.m in Sources */,
+				E2BB829422437FA300A44496 /* NSArray+errorHandle.m in Sources */,
 				E2E360E021ED966400BB7B2E /* AppDelegate.m in Sources */,
 				E2582AAB221FC5BE007EBD27 /* OrderDetailViewController.m in Sources */,
 				E2AEFCA022240B88007C0B76 /* RecordViewController.m in Sources */,

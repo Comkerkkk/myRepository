@@ -30,7 +30,7 @@
     [self.tableView registerNib:[UINib nibWithNibName:@"ShopTableViewCell" bundle:nil] forCellReuseIdentifier:@"ShopCell"];
     
     self.title=@"首页";
-    [self shopRequest];
+//    [self shopRequest];
     self.navigationItem.leftBarButtonItem=[[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"nav_btn_search"] style:UIBarButtonItemStyleDone target:self action:@selector(search)];
 }
 

@@ -25,6 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,strong)NSString*tel;
 @property(nonatomic,strong)NSString*address;
 @property (weak, nonatomic) IBOutlet UIButton *payBtn;
+@property(copy,nonatomic)void(^refreshBlock)(void);
 @end
 
 NS_ASSUME_NONNULL_END
